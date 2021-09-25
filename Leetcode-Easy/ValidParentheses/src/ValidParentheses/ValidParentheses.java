@@ -1,4 +1,5 @@
 package ValidParentheses;
+
 /*
 * Example 1:
 	
@@ -21,42 +22,54 @@ package ValidParentheses;
 	Input: s = "{[]}"
 	Output: true
  */
-public class ValidParentheses 
-{
+public class ValidParentheses {
 
-	public static void main(String[] args) 
-	{
-		String s1 = "()"; //true
-		String s2 = "()[]{}";//true
-		String s3 = "([)]";//false
-		String s4 = "{[]}";//true
-		
+	public static void main(String[] args) {
+		String s1 = "()"; // true
+		String s2 = "()[]{}";// true
+		String s3 = "([)]";// false
+		String s4 = "{[]}";// true
+
 		System.out.println(isValid(s1));
 		System.out.println(isValid(s2));
 		System.out.println(isValid(s3));
 		System.out.println(isValid(s4));
 	}
 
-	public static boolean isValid(String s) 
-    {
-		for(int i  = 0; i < s.length(); i++)
-		{
-			if(s.charAt(i) == '(') 
-			{
-				for(int j  = 0; j < s.length(); j++)
-				{
-					
+	public static boolean isValid(String s) {
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == '(') {
+				for (int t = 1; t < s.length(); t++) {
+					if (s.charAt(t) == ')') {
+						return true;
+					} else if (s.charAt(t + 1) == '}' || s.charAt(t + 1) == ']') {
+						return false;
+					} else {
+						continue;
+					}
+				}
+			} else if (s.charAt(i) == '[') {
+				for (int t = 1; t < s.length(); t++) {
+					if (s.charAt(t) == ']') {
+						return true;
+					} else if (s.charAt(t + 1) == '}' || s.charAt(t + 1) == ')') {
+						return false;
+					} else {
+						continue;
+					}
+				}
+			} else if (s.charAt(i) == '{') {
+				for (int t = 1; t < s.length(); t++) {
+					if (s.charAt(t) == '}') {
+						return true;
+					} else if (s.charAt(t + 1) == ')' || s.charAt(t + 1) == ']') {
+						return false;
+					} else {
+						continue;
+					}
 				}
 			}
-			else if(s.charAt(i) == '[') 
-			{
-				
-			}
-			else if(s.charAt(i) == '{') 
-			{
-				
-			}
 		}
-        return false;
-    }
+		return false;
+	}
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ValidParentheses</name>
+	<name>MaximumTotalPoints</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1632600539297</id>
+			<id>1632600539286</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
