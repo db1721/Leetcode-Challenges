@@ -31,3 +31,9 @@ public class App
         return numArray;
     }
 }
+
+public class Test extends App{
+    App a = new App();
+    Test b = new App();
+    App c = new Test();
+}
