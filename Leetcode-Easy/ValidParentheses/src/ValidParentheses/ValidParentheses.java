@@ -37,20 +37,21 @@ public class ValidParentheses {
 	}
 
 	public static boolean isValid(String s) {
-		String closeFirst = String.valueOf(s.charAt(0));
+		char closeFirst;
 
 		for (int i = 0; i < s.length(); i++) {
 			switch (s.charAt(i)) {
 				case '(':
+				closeFirst = ')';
 					for (int j = 1; j < s.length(); j++) {
 						if (s.charAt(j) == ')') {
-
+							//j
 						}
 					}
 				case '{':
-					System.out.println("}");
+					// System.out.println("}");
 				case '[':
-					System.out.println("]");
+					// System.out.println("]");
 			}
 		}
 		return false;
