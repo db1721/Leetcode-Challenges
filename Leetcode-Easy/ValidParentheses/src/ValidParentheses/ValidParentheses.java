@@ -37,37 +37,20 @@ public class ValidParentheses {
 	}
 
 	public static boolean isValid(String s) {
+		String closeFirst = String.valueOf(s.charAt(0));
+
 		for (int i = 0; i < s.length(); i++) {
-			if (s.charAt(i) == '(') {
-				for (int t = 1; t < s.length(); t++) {
-					if (s.charAt(t) == ')') {
-						return true;
-					} else if (s.charAt(t + 1) == '}' || s.charAt(t + 1) == ']') {
-						return false;
-					} else {
-						continue;
+			switch (s.charAt(i)) {
+				case '(':
+					for (int j = 1; j < s.length(); j++) {
+						if (s.charAt(j) == ')') {
+
+						}
 					}
-				}
-			} else if (s.charAt(i) == '[') {
-				for (int t = 1; t < s.length(); t++) {
-					if (s.charAt(t) == ']') {
-						return true;
-					} else if (s.charAt(t + 1) == '}' || s.charAt(t + 1) == ')') {
-						return false;
-					} else {
-						continue;
-					}
-				}
-			} else if (s.charAt(i) == '{') {
-				for (int t = 1; t < s.length(); t++) {
-					if (s.charAt(t) == '}') {
-						return true;
-					} else if (s.charAt(t + 1) == ')' || s.charAt(t + 1) == ']') {
-						return false;
-					} else {
-						continue;
-					}
-				}
+				case '{':
+					System.out.println("}");
+				case '[':
+					System.out.println("]");
 			}
 		}
 		return false;
