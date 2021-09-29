@@ -1,5 +1,7 @@
 package ValidParentheses;
 
+import java.lang.*;
+
 /*
 * Example 1:
 	
@@ -23,7 +25,6 @@ package ValidParentheses;
 	Output: true
  */
 public class ValidParentheses {
-
 	public static void main(String[] args) {
 		String s1 = "()"; // true
 		String s2 = "()[]{}";// true
@@ -36,24 +37,46 @@ public class ValidParentheses {
 		System.out.println(isValid(s4));
 	}
 
-	public static boolean isValid(String s) {
-		char closeFirst;
-
-		for (int i = 0; i < s.length(); i++) {
-			switch (s.charAt(i)) {
-				case '(':
-				closeFirst = ')';
-					for (int j = 1; j < s.length(); j++) {
-						if (s.charAt(j) == ')') {
-							//j
-						}
-					}
-				case '{':
-					// System.out.println("}");
-				case '[':
-					// System.out.println("]");
+	public static boolean isValid(String str) {
+		StringBuffer sbf = new StringBuffer(str);
+		do{
+		for (int i = 0; i < sbf.length(); i++) {
+			if (sbf.charAt(i) == ')') {
+				if (sbf.charAt(i - 1) == '(') {
+					sbf.deleteCharAt(i);
+					sbf.deleteCharAt(i-1);
+					System.out.println(sbf);
+					continue;
+				} else {
+					return false;
+				}
+			} else if (sbf.charAt(i) == ']') {
+				if (sbf.charAt(i - 1) == '[') {
+					sbf.deleteCharAt(i);
+					sbf.deleteCharAt(i-1);
+					System.out.println(sbf);
+					continue;
+				} else {
+					return false;
+				}
+			}else if (sbf.charAt(i) == '}') {
+				if (sbf.charAt(i - 1) == '{') {
+					sbf.deleteCharAt(i);
+					sbf.deleteCharAt(i-1);
+					System.out.println(sbf);
+					continue;
+				} else {
+					return false;
+				}
 			}
 		}
-		return false;
+	}
+		while(sbf.isEmpty() == false);
+		if(sbf.isEmpty() == true){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }

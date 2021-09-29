@@ -1,39 +1,54 @@
 package Template.src;
 
-public class App 
-{
-    public static void main(String[] args) throws Exception 
-    {
-        int[] nums = {2,7,11,15};
-        int target = 9;
-        theProblem(nums, target);
+public class App {
+    public static void main(String[] args) throws Exception {
+        //!Variables being tested
+        char[] startArray = {'q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'};
         
-        System.out.println("This is a template!");
+        //Starting printing
+        double start = System.currentTimeMillis();
+        System.out.println("*************************Starting***************************");
+
+        //!Print intial variables for comparison (pick array type and change name)
+        loopPrintArrayChar(startArray);
+        
+        //Result printing
+        System.out.println("\n**************************Completed****************************");
+
+        //!Print completed test
+        System.out.println(bubbleSortArray(startArray));
+
+        //Prints runtime
+        double end = System.currentTimeMillis();
+        System.out.println("Runtime: " + (end-start)/1000 + " seconds");
     }
 
-    //The leetcode problem goes here
-    public static int[] theProblem(int[] nums, int target) 
-    {
-        int numLen = nums.length;
-        int [] numArray = new int[2];
-        
-        for(int i = 0; i < numLen; i++)
-        {
-            for (int j = i + 1; j < numLen; j++)
-            {
-                if (nums[j] == target - nums[i])
-                {
-                    numArray[0] = j;
-                    numArray[1] = i;
-                }
-            }
+    //!Paste question's method here
+    public static char[] bubbleSortArray(char[] arr){
+        char[] arr2 = arr;
+        //The alogrithm
+        return arr2;
+    }
+
+    //!Prints array (may need to change array type)
+    public static void loopPrintArrayChar(char[] arr){
+        for(int i = 0; i<arr.length; i++){
+            System.out.print(arr[i]);
         }
-        return numArray;
     }
-}
-
-public class Test extends App{
-    App a = new App();
-    Test b = new App();
-    App c = new Test();
+    public static void loopPrintArrayString(String[] arr){
+        for(int i = 0; i<arr.length; i++){
+            System.out.print(arr[i]);
+        }
+    }
+    public static void loopPrintArrayInt(int[] arr){
+        for(int i = 0; i<arr.length; i++){
+            System.out.print(arr[i]);
+        }
+    }
+    public static void loopPrintArrayDouble(double[] arr){
+        for(int i = 0; i<arr.length; i++){
+            System.out.print(arr[i]);
+        }
+    }
 }
