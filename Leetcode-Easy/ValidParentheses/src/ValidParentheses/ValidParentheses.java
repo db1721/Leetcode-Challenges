@@ -45,7 +45,6 @@ public class ValidParentheses {
 				if (sbf.charAt(i - 1) == '(') {
 					sbf.deleteCharAt(i);
 					sbf.deleteCharAt(i-1);
-					System.out.println(sbf);
 					continue;
 				} else {
 					return false;
@@ -54,7 +53,6 @@ public class ValidParentheses {
 				if (sbf.charAt(i - 1) == '[') {
 					sbf.deleteCharAt(i);
 					sbf.deleteCharAt(i-1);
-					System.out.println(sbf);
 					continue;
 				} else {
 					return false;
@@ -63,7 +61,6 @@ public class ValidParentheses {
 				if (sbf.charAt(i - 1) == '{') {
 					sbf.deleteCharAt(i);
 					sbf.deleteCharAt(i-1);
-					System.out.println(sbf);
 					continue;
 				} else {
 					return false;

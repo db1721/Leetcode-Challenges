@@ -10,13 +10,13 @@ public class App {
     public String longestCommonPrefix(String[] strs) {
         char[] commonPrefix = new char[strs.length];
         String prefixString = strs[0];
-        int arrayIndex = 1;
+        int arrayIndex = 0;
 
         do{
             int tempLength = strs[arrayIndex].length();
 
             //make comparisons
-            for(int i = 1; i<tempLength; i++){
+            for(int i = 0; i<tempLength; i++){
                 String tempString = strs[i];
             }
             //count up the array index
