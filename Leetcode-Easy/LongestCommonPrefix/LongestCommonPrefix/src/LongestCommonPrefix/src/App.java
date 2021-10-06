@@ -12,15 +12,23 @@ public class App {
     }
 
     public String longestCommonPrefix(String[] strs) {
-        //int stringsToCompare = strs.length;
-        String initialPrefix = strs[0];
-        String prefixString = "";
+        int stringsToCompare = strs.length;
         
-        for(int i = 0; i <initialPrefix.length(); i++){
-            if(initialPrefix.charAt(i) == strs[i].charAt(i)){
-                prefixString = prefixString + initialPrefix.charAt(i);
-            }
-            
+        //build first prefix
+        String prefixString = strs[0];
+        String newPrefixString = "";
+        
+        //loop through all elements
+        for(int i = 0; i < (stringsToCompare-1); i++){
+                String initialPrefix = strs[i];
+                
+                //compare prefix to other elements
+                for(int j = 0; j<prefixString.length()-2;j++){
+                    if(strs[i].charAt(j) != prefixString.charAt(j))
+                        System.out.println(strs[i].charAt(j));
+                        //newPrefixString.substring(i, i)
+                    }
+                newPrefixString=prefixString;
          }
         return prefixString;
     }
