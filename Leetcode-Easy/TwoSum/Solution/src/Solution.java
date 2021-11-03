@@ -6,8 +6,9 @@ public class Solution
         int target = 9;
 
         Solution sol = new Solution();
+        int[] nums2 = sol.twoSum(nums, target);
         
-        System.out.println(sol.twoSum(nums, target));
+        System.out.print(nums2[0] + ", " + nums2[1]);
     }
 
     public int[] twoSum(int[] nums, int target) 
@@ -21,8 +22,8 @@ public class Solution
             {
                 if (nums[j] == target - nums[i])
                 {
-                    numArray[0] = j;
-                    numArray[1] = i;
+                    numArray[0] = i;
+                    numArray[1] = j;
                 }
             }
         }
