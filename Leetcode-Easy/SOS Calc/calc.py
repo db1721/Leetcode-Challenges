@@ -1,9 +1,9 @@
 class SOS_Calc:
     def __init__(self):
-        self.min1 = [6945]
-        self.min5 = [12538, 5569]
-        self.hour1 = [1744, 1229]
-        self.hour3 = [197]
+        self.min1 = [7366]
+        self.min5 = [12961, 5595]
+        self.hour1 = [1757, 1251]
+        self.hour3 = [201]
         self.hour8 = [96]
         
         self.total = 0
@@ -17,6 +17,7 @@ class SOS_Calc:
         # OLD - 68,457,525 possible power
         # OLD - 78,552,455 possible power (after crates)
         # 5/23 - 357,400 minutes total | 1,701,904 total troops | 228,055,238 possible power
+        # 5/27 - 362,886 minutes total | 1,728,028 total troops | 231,555,828 possible power
         
     def run_calc(self):
         self.sum(self.min1)
