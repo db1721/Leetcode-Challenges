@@ -12,6 +12,7 @@ class SOS_Calc:
         self.time_to_train = 36 # in seconds (was 34. idk why it went up after upgrading training camps)
         self.patriot = True
         self.state_buff = True
+        self.points_in_event = 37
         
         # OLD - 62,054,848 possible power
         # OLD - 68,457,525 possible power
@@ -45,6 +46,10 @@ class SOS_Calc:
         
         print(f'{temp1} total troops')
         print(f'{numbers} possible power')
+        
+        total_points = temp * self.points_in_event
+        temp_total_points = "{:,}".format(int(total_points))
+        print(f'{temp_total_points} possible points in event')
 
     def sum(self, list_eval):
         if list_eval is self.min1:
